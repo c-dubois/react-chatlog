@@ -4,8 +4,6 @@ import './App.css';
 import ChatLog from './components/ChatLog';
 
 const App = () => {
-  const firstMessage = messages[0];
-
   return (
     <div id="App">
       <header>
