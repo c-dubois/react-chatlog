@@ -1,6 +1,7 @@
 import ChatEntry from './components/ChatEntry';
 import messages from './data/messages.json';
 import './App.css';
+import ChatLog from './components/ChatLog';
 
 const App = () => {
   const firstMessage = messages[0];
@@ -11,11 +12,7 @@ const App = () => {
         <h1>Camille's Chatroom</h1>
       </header>
       <main>
-        <ChatEntry
-          sender={firstMessage.sender}
-          body={firstMessage.body}
-          timeStamp={firstMessage.timeStamp}
-        />
+        <ChatLog messages={messages} />
       </main>
     </div>
   );
