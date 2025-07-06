@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 
 import './ChatEntry.css';
+import { send } from 'vite';
 
 const ChatEntry = (props) => {
   return (
@@ -18,7 +19,9 @@ const ChatEntry = (props) => {
 };
 
 ChatEntry.propTypes = {
-  // Fill with correct proptypes
+  sender: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
+  timeStamp: PropTypes.string.isRequired,
 };
 
 export default ChatEntry;
