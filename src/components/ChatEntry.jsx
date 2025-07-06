@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
-
+import Timestamp from './Timestamp'
 import './ChatEntry.css';
-import { send } from 'vite';
 
 const ChatEntry = (props) => {
   return (
