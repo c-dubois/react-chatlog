@@ -20,7 +20,7 @@ const App = () => {
       <header>
         <h1>Camille's Chatroom</h1>
         <section className="widget" id="heartWidget">
-          {chatData.filter((msg) => msg.liked).length} ❤️s
+          {chatData.filter((entry) => entry.liked).length} ❤️s
         </section>
       </header>
       <main>
