@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import TimeStamp from './Timestamp'
+import TimeStamp from './TimeStamp'
 import './ChatEntry.css';
 
 const ChatEntry = (props) => {
