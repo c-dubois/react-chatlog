@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import Timestamp from './Timestamp'
+import TimeStamp from './Timestamp'
 import './ChatEntry.css';
 
 const ChatEntry = (props) => {
@@ -11,7 +11,7 @@ const ChatEntry = (props) => {
       <section className="entry-bubble">
         <p>{props.body}</p>
         <p className="entry-time">
-          <Timestamp timeStamp={props.timeStamp} />
+          <TimeStamp timeStamp={props.timeStamp} />
         </p>
         <button className="like" onClick={() => props.onLike(props.id)}>
           {heartColor}
@@ -22,7 +22,7 @@ const ChatEntry = (props) => {
 };
 
 ChatEntry.propTypes = {
-  id: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
   sender: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
   timeStamp: PropTypes.string.isRequired,
