@@ -11,7 +11,7 @@ const ChatEntry = (props) => {
       <section className="entry-bubble">
         <p>{props.body}</p>
         <p className="entry-time">
-          <TimeStamp timeStamp={props.timeStamp} />
+          <TimeStamp time={props.timeStamp} />
         </p>
         <button className="like" onClick={() => props.onLike(props.id)}>
           {heartColor}
