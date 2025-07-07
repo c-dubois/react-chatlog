@@ -1,16 +1,30 @@
-import ChatEntry from './components/ChatEntry';
+import { useState } from 'react';
+import ChatLog from './components/ChatLog';
 import messages from './data/messages.json';
 import './App.css';
-import ChatLog from './components/ChatLog';
 
 const App = () => {
+  const [chatData, setChatData] = useState(messages);
+
+  const toggleLike = (id) => {
+    setChatData(chatData.map((message) => {
+      if (message.id === id) {
+        return { ...message, liked: !message.liked };
+      }
+      return message;
+    }));
+  };
+
   return (
     <div id="App">
       <header>
         <h1>Camille's Chatroom</h1>
+        <section className="widget" id="heartWidget">
+          {chatData.filter((msg) => msg.liked).length} ❤️s
+        </section>
       </header>
       <main>
-        <ChatLog messages={messages} />
+        <ChatLog entries={chatData} onLike={toggleLike} />
       </main>
     </div>
   );
